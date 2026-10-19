@@ -1,0 +1,65 @@
+# Logs
+logs/
+*.log
+*.log.*
+
+# Tomcat
+webapps/*.war
+webapps/*.jar
+!webapps/ROOT
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+.classpath
+.project
+.settings/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Docker
+.dockerignore
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# Compiled files
+*.class
+*.jar
+*.war
+target/
+build/
+out/
+dist/
+
+# Maven
+.mvn/
+mvnw
+mvnw.cmd
+
+# Gradle
+.gradle/
+gradle/
+gradlew
+gradlew.bat
+
+# PostgreSQL dumps
+*.sql.gz
+*.dump
+
+# Environment variables
+.env
+.env.local
+.env.*.local
