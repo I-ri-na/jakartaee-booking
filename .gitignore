@@ -26,9 +26,6 @@ webapps/*.jar
 Thumbs.db
 desktop.ini
 
-# Docker
-.dockerignore
-
 # Temporary files
 *.tmp
 *.temp

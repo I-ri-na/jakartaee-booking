@@ -24,6 +24,7 @@
     String ctx = request.getContextPath();
     List<Client> clients = (List<Client>) request.getAttribute("clients");
     List<Booking> bookings = (List<Booking>) request.getAttribute("bookings");
+    String error = (String) request.getAttribute("error");
 %>
 <!DOCTYPE html>
 <html lang="ru">
@@ -39,6 +40,10 @@
 
 <div class="container my-4">
     <h1 class="mb-4">Система бронирования</h1>
+
+    <% if (error != null && !error.isBlank()) { %>
+    <div class="alert alert-danger"><%= h(error) %></div>
+    <% } %>
 
     <!-- ===================== Клиенты ===================== -->
     <div class="row">
