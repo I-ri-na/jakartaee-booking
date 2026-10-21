@@ -27,6 +27,10 @@ public class BookingServiceBean {
     }
 
     public Booking saveBooking(Booking booking) {
+        if (booking.getCheckIn() == null || booking.getCheckOut() == null
+                || !booking.getCheckOut().isAfter(booking.getCheckIn())) {
+            throw new IllegalArgumentException("Дата выезда должна быть позже даты заезда");
+        }
         if (booking.getId() == null) {
             booking.setBookedAt(LocalDateTime.now());
             booking.setStatus(BookingStatus.created);
