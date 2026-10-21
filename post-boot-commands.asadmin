@@ -1,0 +1,2 @@
+create-jdbc-connection-pool --datasourceclassname=org.postgresql.ds.PGSimpleDataSource --restype=javax.sql.DataSource --property=user=booking:password=booking:databaseName=booking:serverName=db:portNumber=5432 bookingPool
+create-jdbc-resource --connectionpoolid=bookingPool jdbc/bookingDS
